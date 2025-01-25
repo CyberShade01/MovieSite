@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Movie Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #141414, #1e1e1e);
+      color: white;
+      overflow-x: hidden;
+    }
+    /* Top Bar */
+    .topbar {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+    .topbar h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: #f4c10f;
+    }
+    .topbar nav a {
+      text-decoration: none;
+      color: white;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    .topbar nav a:hover {
+      color: #f4c10f;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: black;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+    header h2 {
+      font-size: 2.5rem;
+      color: #f4c10f;
+      margin: 0;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      color: #dcdcdc;
+    }
+
+    .movie-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .movie-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .movie-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+    .movie-poster img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .movie-info {
+      padding: 1rem;
+    }
+    .movie-info h3 {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem;
+      color: #f4c10f;
+    }
+    .movie-info p {
+      font-size: 1rem;
+      margin: 0 0 1.5rem;
+      color: #dcdcdc;
+    }
+    .movie-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .movie-button {
+      padding: 0.8rem;
+      font-size: 1rem;
+      color: white;
+      background: #f4c10f;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .movie-button:hover {
+      background: #d1a509;
+      transform: scale(1.05);
+    }
+    .movie-button:active {
+      transform: scale(1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: black;
+      color: #dcdcdc;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <h1>Movie Showcase</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Trending</a>
+      <a href="#">New Releases</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+
+  <header>
+    <h2>Explore Top Movies</h2>
+    <p>Your portal to the latest and greatest films</p>
+  </header>
+
+  <section class="movie-list">
+    <!-- Movie 1 -->
+    <div class="movie-card">
+      <div class="movie-poster">
+        <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
+      </div>
+      <div class="movie-info">
+        <h3>Movie Title 1</h3>
+        <p>A gripping tale of adventure and mystery.</p>
+        <div class="movie-buttons">
+          <button class="movie-button">Watch Now</button>
+          <button class="movie-button">Details</button>
+          <button class="movie-button">Add to Favorites</button>
+          <button class="movie-button">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 2 -->
+    <div class="movie-card">
+      <div class="movie-poster">
+        <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
+      </div>
+      <div class="movie-info">
+        <h3>Movie Title 2</h3>
+        <p>An emotional journey that will tug at your heartstrings.</p>
+        <div class="movie-buttons">
+          <button class="movie-button">Watch Now</button>
+          <button class="movie-button">Details</button>
+          <button class="movie-button">Add to Favorites</button>
+          <button class="movie-button">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 3 -->
+    <div class="movie-card">
+      <div class="movie-poster">
+        <img src="https://via.placeholder.com/300x400" alt="Movie Poster">
+      </div>
+      <div class="movie-info">
+        <h3>Movie Title 3</h3>
+        <p>A high-stakes thriller that will keep you on the edge of your seat.</p>
+        <div class="movie-buttons">
+          <button class="movie-button">Watch Now</button>
+          <button class="movie-button">Details</button>
+          <button class="movie-button">Add to Favorites</button>
+          <button class="movie-button">Share</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Movie Showcase. All rights reserved.
+  </footer>
+</body>
+</html>
